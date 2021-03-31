@@ -14,10 +14,14 @@
 	}
 </script>
 
+{#if ($location!=="/login")&&($location!=="/signup")}
+<Header />
+{/if}
+
+
 <Router {routes}/>
 
 
 {#if ($location!=="/login")&&($location!=="/signup")}
 <Footer />
-<Header />
 {/if}
