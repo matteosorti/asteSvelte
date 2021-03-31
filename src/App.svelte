@@ -5,6 +5,7 @@
 	import Login from "./Login.svelte"
 	import Signup from "./Signup.svelte"
 	import Footer from "./Footer.svelte"
+	import Header from "./Header.svelte"
 	let routes = {
 		'/': Home,
 		'/dettaglio': Dettaglio,
@@ -18,4 +19,5 @@
 
 {#if ($location!=="/login")&&($location!=="/signup")}
 <Footer />
+<Header />
 {/if}
