@@ -9,7 +9,9 @@
         username, password
       })
       if(result.resultTest){
+        console.log("entrato")
         sessionStorage.setItem("utente", JSON.stringify(result))
+        console.log(result)
         push("/")
       }
     }
