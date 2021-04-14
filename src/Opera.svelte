@@ -1,6 +1,6 @@
 <script>
     import {link} from 'svelte-spa-router'
-    export let titolo,descrizione, idopera;
+    export let titolo,descrizione, idopera, foto;
 </script>
 
 <section class="text-gray-600 body-font">
@@ -8,7 +8,7 @@
       <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
         <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
           <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1205x505">
+            <img alt="content" class="object-cover object-center h-full w-full" src="{foto}">
           </div>
           <h2 class="text-xl font-medium title-font text-gray-900 mt-5">{titolo}</h2>
           <p class="text-base leading-relaxed mt-2">{descrizione}</p>

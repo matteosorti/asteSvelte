@@ -18,4 +18,4 @@
      })
 </script>
 
-<DettaglioOpera titolo={opera.titolo} descrizione={opera.descrizione} idopera={opera.idopera} idartista={opera.idartista}/>
+<DettaglioOpera titolo={opera.titolo} descrizione={opera.descrizione} idopera={opera.idopera} idartista={opera.idartista} foto={opera.foto}/>

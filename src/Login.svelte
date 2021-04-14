@@ -8,7 +8,9 @@
       const result=await axios.post("http://localhost:8090/projectwork/rest/utente/login", {
         username, password
       })
-      if(result.resultTest){
+      console.log(result)
+      console.log(result.data.resultTest)
+      if(result.data.resultTest){
         console.log("entrato")
         sessionStorage.setItem("utente", JSON.stringify(result))
         console.log(result)

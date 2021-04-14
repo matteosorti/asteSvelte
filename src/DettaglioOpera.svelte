@@ -1,6 +1,6 @@
 <script>
     import {link} from 'svelte-spa-router'
-    export let titolo, descrizione, idopera, idartista;
+    export let titolo, descrizione, idopera, idartista, foto;
 </script>
 
 <section class="text-gray-600 body-font overflow-hidden">
@@ -20,7 +20,7 @@
             <button class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Offerta</button>
           </div>
         </div>
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{foto}">
       </div>
     </div>
   </section>
