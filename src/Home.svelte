@@ -13,7 +13,6 @@
     })
 </script>
 
-<a href="/login" use:link>logout</a>
 {#each opere as opera}
  <Opera titolo={opera.titolo} descrizione={opera.descrizione}/>
 {/each}
