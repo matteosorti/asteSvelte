@@ -14,5 +14,5 @@
 </script>
 
 {#each opere as opera}
- <Opera titolo={opera.titolo} descrizione={opera.descrizione}/>
+ <Opera titolo={opera.titolo} descrizione={opera.descrizione} idopera={opera.idopera}/>
 {/each}
