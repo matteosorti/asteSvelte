@@ -1,11 +1,17 @@
 <script>
     import {link} from 'svelte-spa-router'
     import axios from 'axios';
+    import {push} from 'svelte-spa-router'
     let username,password;
 
-    function login(){
-      console.log(username);
-      console.log(password);
+    async function login(){
+      const result=await axios.post("http://localhost:8090/projectwork/rest/utente/login", {
+        username, password
+      })
+      if(result.resultTest){
+        sessionStorage.setItem("utente", JSON.stringify(result))
+        push("/")
+      }
     }
 </script>
 

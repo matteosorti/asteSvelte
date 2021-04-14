@@ -12,7 +12,7 @@
           </div>
           <h2 class="text-xl font-medium title-font text-gray-900 mt-5">{titolo}</h2>
           <p class="text-base leading-relaxed mt-2">{descrizione}</p>
-          <a href="/dettaglio?id={idopera}" use:link class="text-yellow-500 inline-flex items-center mt-3">Fai la tua offerta
+          <a href="/dettaglio/{idopera}" use:link class="text-yellow-500 inline-flex items-center mt-3">Fai la tua offerta
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>

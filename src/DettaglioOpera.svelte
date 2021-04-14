@@ -1,6 +1,6 @@
 <script>
     import {link} from 'svelte-spa-router'
-    export let titolo, descrizione, idopera, artista;
+    export let titolo, descrizione, idopera, idartista;
 </script>
 
 <section class="text-gray-600 body-font overflow-hidden">
@@ -9,7 +9,7 @@
         <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
           <h3 class="text-sm title-font text-gray-500 tracking-widest">ASTALAVISTA</h3>
           <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">{titolo}</h1>
-          <h2 class="text-sm title-font text-gray-500 tracking-widest">{artista}</h2>
+          <h2 class="text-sm title-font text-gray-500 tracking-widest">{idartista}</h2>
           <div class="flex mb-4">
             <span class="flex-grow text-yellow-500 border-b-2 border-yellow-500 py-2 text-lg px-1">Description</span>
           </div>

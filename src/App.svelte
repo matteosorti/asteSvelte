@@ -8,7 +8,7 @@
 	import Header from "./Header.svelte"
 	let routes = {
 		'/': Home,
-		'/dettaglio': Dettaglio,
+		'/dettaglio/:id': Dettaglio,
 		'/login': Login,
 		'/signup': Signup,
 	}
