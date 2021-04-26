@@ -1,6 +1,6 @@
 <script>
     import {link} from 'svelte-spa-router'
-    export let titolo,descrizione, idopera, foto;
+    export let titolo,descrizione, idopera, foto, creazione, scadenza, scaduto;
 </script>
 
 <section class="text-gray-600 body-font">
@@ -11,6 +11,7 @@
             <img alt="content" class="object-cover object-center h-full w-full" src="{foto}">
           </div>
           <h2 class="text-xl font-medium title-font text-gray-900 mt-5">{titolo}</h2>
+          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Scadenza: {scadenza}</h2>
           <p class="text-base leading-relaxed mt-2">{descrizione}</p>
           <a href="/dettaglio/{idopera}" use:link class="text-yellow-500 inline-flex items-center mt-3">Fai la tua offerta
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">

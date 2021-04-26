@@ -11,9 +11,10 @@
       const result=await axios.get("http://localhost:8090/projectwork/rest/opera/findAll")
       console.log(result);
       opere=result.data.result;
+      console.log(result)
     })
 </script>
 
 {#each opere as opera}
- <Opera titolo={opera.titolo} descrizione={opera.descrizione} idopera={opera.idopera} foto={opera.foto}/>
+ <Opera titolo={opera.titolo} descrizione={opera.descrizione} idopera={opera.idopera} foto={opera.foto} creazione={opera.creazione} scadenza={opera.scadenza} scaduto={opera.scaduto}/>
 {/each}
