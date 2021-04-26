@@ -6,11 +6,14 @@
 	import Signup from "./Signup.svelte"
 	import Footer from "./Footer.svelte"
 	import Header from "./Header.svelte"
+	import User from "./User.svelte"
+
 	let routes = {
 		'/': Home,
 		'/dettaglio/:id': Dettaglio,
 		'/login': Login,
 		'/signup': Signup,
+		'/user': User
 	}
 </script>
 

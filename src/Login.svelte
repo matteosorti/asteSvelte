@@ -12,7 +12,7 @@
       console.log(result.data.resultTest)
       if(result.data.resultTest){
         console.log("entrato")
-        sessionStorage.setItem("utente", JSON.stringify(result))
+        sessionStorage.setItem("utente", JSON.stringify(result.data.result))
         console.log(result)
         push("/")
       }

@@ -1,22 +1,14 @@
 <script>
     import {link} from 'svelte-spa-router'
     export let titolo, descrizione, idopera, idartista, foto;
+    let valore="";
 
+    
     async function offerta(){
-      const result=await axios.post("http://localhost:8090/projectwork/rest/opera/updateOfferta", {
-        valore, idutente
-      })
+      const {idutente}=JSON.parse(sessionStorage.getItem("utente"));
       const result2=await axios.post("http://localhost:8090/projectwork/rest/utenteHasOpera/update", {
         valore, idutente
       })
-      console.log(result)
-      console.log(result.data.resultTest)
-      if(result.data.resultTest){
-        console.log("entrato")
-        sessionStorage.setItem("utente", JSON.stringify(result))
-        console.log(result)
-        push("/")
-      }
     }
 </script>
 
@@ -33,7 +25,7 @@
           <p class="leading-relaxed mb-4">{descrizione}</p>
           
           <div class="flex">
-            <input type="text" id="valore" name="valore" class="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <input bind:value={valore} type="text" id="valore" name="valore" class="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             <button on:click={offerta} class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Offerta</button>
           </div>
         </div>

@@ -1,9 +1,10 @@
 <script>
-    import {link} from 'svelte-spa-router'
+    import {link, push} from 'svelte-spa-router'
     import { onMount } from 'svelte';
     import axios from 'axios';
     import Opera from './Opera.svelte'
 
+    
     let opere = []
     onMount(async()=>{
       console.log("montato")
