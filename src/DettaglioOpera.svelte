@@ -1,5 +1,6 @@
 <script>
     import {link} from 'svelte-spa-router'
+    import axios from 'axios';
     export let titolo, descrizione, idopera, idartista, foto, creazione, scaduto, scadenza;
     let valore="";
 
@@ -7,7 +8,7 @@
     async function offerta(){
       const {idutente}=JSON.parse(sessionStorage.getItem("utente"));
       const result2=await axios.post("http://localhost:8090/projectwork/rest/utenteHasOpera/update", {
-        valore, idutente
+        idopera, valore, idutente
       })
     }
 </script>
