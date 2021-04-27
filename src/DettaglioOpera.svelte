@@ -5,13 +5,13 @@
     let valore="";
     
     async function offerta(){
-      const {idutente}=JSON.parse(sessionStorage.getItem("utente"));
+      const {id_utente}=JSON.parse(sessionStorage.getItem("utente"));
       const {id}=idopera;
-      console.log("utente: "+idutente);
+      console.log("utente: "+id_utente);
       console.log("idopera: "+idopera);
       console.log("id: "+id);
       const result2=await axios.post("http://localhost:8090/projectwork/rest/utenteHasOpera/update", {
-        id, idopera, idutente, valore
+        id, idopera, id_utente, valore
       })
     }
 </script>
