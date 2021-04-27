@@ -3,15 +3,17 @@
     import axios from 'axios';
     export let titolo, descrizione, idopera, idartista, foto, creazione, scaduto, scadenza;
     let valore="";
+    let id="";
     
+
     async function offerta(){
-      const {id_utente}=JSON.parse(sessionStorage.getItem("utente"));
-      const {id}=idopera;
-      console.log("utente: "+id_utente);
+      const {idutente}=JSON.parse(sessionStorage.getItem("utente"));
+      console.log("utente: "+idutente);
       console.log("idopera: "+idopera);
       console.log("id: "+id);
+      id=idopera;
       const result2=await axios.post("http://localhost:8090/projectwork/rest/utenteHasOpera/update", {
-        id, idopera, id_utente, valore
+        id, idopera, idutente, valore
       })
     }
 </script>
