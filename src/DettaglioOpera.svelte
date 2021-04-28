@@ -34,8 +34,7 @@
             {#if scaduto==0}
             <input bind:value={valore} type="text" id="valore" name="valore" class="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             <button on:click={offerta} class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Offerta</button>
-            {/if}
-            {#if scaduto==1}
+            {:else}
             
             <input disabled=true bind:value={valore} type="text" id="valore" name="valore" class="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="asta scaduta">
             <button disabled=true on:click={offerta} class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Offerta</button>
